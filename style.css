@@ -1,0 +1,457 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    
+}
+
+body{
+font-family: 'Josefin Sans' , sans-serif;
+background-color:#ffffff;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 7%;
+    background-color:#ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+}
+
+.navbar .navbarlogo{
+    font-size: 3rem;
+    font-weight: 400;
+    color: #D8A2A2;
+    font-family: 'Carattere';
+}
+
+.navbar .navbarnav > a,
+.navbar .dropdown > a{
+    color: #A2AB73;
+    display: inline-block;
+    font-size: 1.1rem;
+    margin: 0 2rem;
+    padding: 0.6rem 0;
+}
+
+.navbar .navbarnav > a:hover,
+.navbar .dropdown > a:hover,
+.navbar .dropdown:hover > a{
+    color:#957C62;
+}
+
+/* Dropdown */
+.navbar .dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.navbar .dropdown > a::after{
+    content: '';
+    display: inline-block;
+    width: 0.4em;
+    height: 0.4em;
+    margin-left: 0.5em;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-0.15em) rotate(45deg);
+}
+
+.navbar .dropdown-menu{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 15rem;
+    padding: 0.6rem 0;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 14px rgba(149, 124, 98, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+
+.navbar .dropdown:hover .dropdown-menu,
+.navbar .dropdown:focus-within .dropdown-menu{
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar .dropdown-menu a{
+    display: block;
+    padding: 0.7rem 1.4rem;
+    font-size: 1rem;
+    white-space: nowrap;
+    color: #957C62;
+}
+
+.navbar .dropdown-menu a:hover{
+    background-color: #D8A2A2;
+    color: #ffffff;
+}
+
+.navbar .navbarextra a{
+    color:#A2AB73;
+    margin:1rem;
+}
+
+.navbar .navbarextra a:hover{
+    color: #957C62;
+}
+
+#hamburgermenu{
+    display: none;
+}
+
+/* Hero Section */
+.hero{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 8%;
+    align-items: center;
+    color: #ffffff;
+    font-family: 'Old Standard TT';
+    background-image: url('IMGPROJECTUTS/IMG_5810.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero .content p{
+    font-family: 'Caveat';
+}
+
+.hero .content .pesan{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: #ffffff;
+    background-color:#D8A2A2;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/* About Section */
+.Tentang, .Menu, .Kontak{
+    padding: 7rem 7% 3rem;
+}
+.Tentang h1{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: 'Carattere';
+    color: #957C62;
+    font-size: 5rem;
+}
+.Tentang h2{
+    font-size:2rem;
+    margin-bottom: 1rem;
+    color:#957C62;
+    font-family: 'DM Sans';
+}
+.Tentang p{
+    color: #957C62;
+    font-family: 'Josefin Sans';
+    font-size: 1.5rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+.Tentang .tentangisi{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.Tentang .subbagian{
+    margin-bottom: 3.5rem;
+}
+.Tentang .h2lanjutan{
+    margin-top: 2rem;
+}
+
+/* Produk Section */
+.Menu{
+    background-color: #A2AB73;
+    min-height: 100vh;
+}
+.Menu h1{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: 'Carattere';
+    color: #ffffff;
+    font-size: 5rem;
+}
+
+.Menu .kategori{
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+}
+
+.Menu .kategori h2{
+    font-family: 'DM Sans';
+    font-weight: 600;
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid #ffffff;
+}
+
+.Menu .row{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.Menu .row .menucard{
+    background-color: #ffffff;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 6px rgba(149, 124, 98, 0.4);
+}
+
+.Menu .row .menucard img{
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+}
+
+.Menu .row a.menucard{
+    color: inherit;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.Menu .row a.menucard:hover,
+.Menu .row a.menucard:focus-visible{
+    transform: translateY(-4px);
+    box-shadow: 2px 4px 12px rgba(149, 124, 98, 0.6);
+}
+
+.Menu .menucardorder{
+    display: inline-block;
+    margin-top: auto;
+    transform: none;
+    padding: 0.6rem 1.3rem;
+    border-radius: 0.5rem;
+    background-color: #957C62;
+    color: #ffffff;
+    font-size: 1.05rem;
+}
+
+.Menu .menucardbody{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.2rem 1.4rem 1.6rem;
+    color: #957C62;
+}
+
+.Menu .menucardsize{
+    display: inline-block;
+    padding: 0.2rem 0.9rem;
+    margin-bottom: 0.6rem;
+    border-radius: 2rem;
+    font-size: 0.95rem;
+    background-color: #957C62;
+    color: #ffffff;
+}
+
+.Menu .menucardtitle{
+    font-family: 'DM Sans';
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.Menu .menucardprice{
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.7rem;
+}
+
+.Menu .menucarddesc{
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/* Kontak Section */
+.Kontak{
+    background-color: #957C62;
+    color: #ffffff;
+}
+.Kontak h1{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: 'Carattere';
+    font-size: 5rem;
+    color: #ffffff;
+}
+.Kontak .kontakisi{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+.Kontak .kontakitem h3{
+    font-family: 'DM Sans';
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid #D8A2A2;
+}
+.Kontak .kontakitem p{
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+.Kontak .hakcipta{
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.Kontak .kontakitem img{
+    width: 1.2rem;
+    height: 1.2rem;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+/* Laptop */
+@media (max-width:1366px){
+    html {
+        font-size: 85%;
+    }
+}
+
+/* Tablet */
+@media (max-width:768px){
+    html {
+        font-size: 62.5%;
+    }
+    #hamburgermenu{
+        display: inline-block;
+    }
+    .navbar .navbarnav{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fefefd;
+        width: 30rem;
+        height: 100vh;
+        overflow-y: auto;
+        transition: 0.3s;
+    }
+    .navbar .navbarnav.active{
+        right: 0;
+    }
+    .navbar .navbarnav > a,
+    .navbar .dropdown > a{
+        color:#A2AB73;
+        display: block;
+        margin: 1rem 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+    .navbar .dropdown{
+        display: block;
+    }
+    .navbar .dropdown > a::after{
+        display: none;
+    }
+    /* Di HP/tablet submenu langsung tampil di bawah menu utama */
+    .navbar .dropdown-menu{
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        min-width: 0;
+        padding: 0 0 0.5rem 2.5rem;
+        background-color: transparent;
+    }
+    .navbar .dropdown-menu a{
+        padding: 0.4rem 0.5rem;
+        font-size: 1.7rem;
+        color: #957C62;
+    }
+    .Menu .row{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Phone */
+@media (max-width:450px){
+    html {
+        font-size: 50%;
+    }
+    #hamburgermenu{
+        display: inline-block;
+    }
+    .navbar .navbarnav{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fcfcfc;
+        width: 30rem;
+        height: 100vh;
+        overflow-y: auto;
+        transition: 0.3s;
+    }
+    .navbar .navbarnav.active{
+        right: 0;
+    }
+    .navbar .navbarnav > a,
+    .navbar .dropdown > a{
+        color:#A2AB73;
+        display: block;
+        margin: 1rem 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+    .navbar .dropdown{
+        display: block;
+    }
+    .navbar .dropdown > a::after{
+        display: none;
+    }
+    
+    .navbar .dropdown-menu{
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        min-width: 0;
+        padding: 0 0 0.5rem 2.5rem;
+        background-color: transparent;
+    }
+    .navbar .dropdown-menu a{
+        padding: 0.4rem 0.5rem;
+        font-size: 1.7rem;
+        color: #957C62;
+    }
+    .Menu .row{
+        grid-template-columns: 1fr;
+    }
+}
