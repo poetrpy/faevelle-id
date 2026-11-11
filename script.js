@@ -22,9 +22,7 @@ navbarnav.querySelectorAll('a').forEach(function (link) {
 
 
 // ===== Pesan via WhatsApp =====
-// Ganti nomor admin di sini (format internasional, tanpa 0 di depan dan tanpa tanda +/-)
-// Contoh: 0812-3456-7890  ->  6281234567890
-const NOMOR_WA_ADMIN = '6281234567890';
+const NOMOR_WA_ADMIN = '62812345678910';
 
 document.querySelectorAll('.menucard').forEach(function (card) {
     const nama = card.querySelector('.menucardtitle').textContent.trim();
