@@ -118,7 +118,6 @@ html{
     display: none;
 }
 
-/* Hero Section */
 .hero{
     min-height: 100vh;
     display: flex;
@@ -150,7 +149,6 @@ html{
     box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
 
-/* About Section */
 .Tentang, .Menu, .Kontak{
     padding: 7rem 7% 3rem;
 }
@@ -185,7 +183,6 @@ html{
     margin-top: 2rem;
 }
 
-/* Produk Section */
 .Menu{
     background-color: #A2AB73;
     min-height: 100vh;
@@ -294,7 +291,6 @@ html{
     margin-bottom: 1rem;
 }
 
-/* Kontak Section */
 .Kontak{
     background-color: #957C62;
     color: #ffffff;
@@ -335,6 +331,57 @@ html{
     height: 1.2rem;
     vertical-align: middle;
     margin-right: 0.5rem;
+}
+
+/* Form Kirim Pesan */
+.Kontak .contact-form {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    color: #333333;
+}
+
+.Kontak .contact-form h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #957C62;
+}
+
+.Kontak .contact-form label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.Kontak .contact-form input,
+.Kontak .contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 0.5rem;
+    font-family: inherit;
+    font-size: 1.1rem;
+}
+
+.Kontak .contact-form textarea {
+    height: 12rem;
+    resize: vertical;
+}
+
+.Kontak .contact-form button {
+    padding: 1rem 2rem;
+    background-color: #957C62;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.Kontak .contact-form button:hover {
+    background-color: #D8A2A2;
 }
 
 /* Laptop */
@@ -379,7 +426,7 @@ html{
     .navbar .dropdown > a::after{
         display: none;
     }
-    /* Di HP/tablet submenu langsung tampil di bawah menu utama */
+
     .navbar .dropdown-menu{
         position: static;
         transform: none;
